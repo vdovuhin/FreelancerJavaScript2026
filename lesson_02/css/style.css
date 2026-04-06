@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+/* Локальне підключення шрифтів */
+/* Скидання стилів */
+@import url("reset.css");
+/* Основні стилі */
+.wrapper {
+  overflow: clip; /* clip */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+/* --------------------- */
+[class*=__container] {
+  max-width: 1024px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+
+/* --------------------- */
+.page__container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+}
+.page__main {
+  padding-block: 40px;
+  line-height: 1.5;
+}
+.page__items {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.page__item:not(:last-child) {
+  margin-block-end: 10px;
+}
+.page__item-tite {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(70, 97, 151);
+}
+.page__item-tite:not(:last-child) {
+  margin-block-end: 5px;
+}
+.page__item-link:hover {
+  text-decoration: underline;
+}
+.main__titel {
+  font-size: 40px;
+  font-weight: 600;
+}
+.main__text {
+  font-size: 18px;
+}
