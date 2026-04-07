@@ -13,55 +13,56 @@ let maxDay = week[0];
 let working = 0;
 let dayOff = 0;
 function dayWeek(i) {
-  let day;
-  switch (i) {
-    case 0:
-      day = "Понеділок";
-      break;
-    case 1:
-      day = "вівторок";
-      break;
-    case 2:
-      day = "середа";
-      break;
-    case 3:
-      day = "четверг";
-      break;
-    case 4:
-      day = "П'ятниця";
-      break;
-    case 5:
-      day = "Субота";
-      break;
-    case 6:
-      day = "Неділя";
-      break;
-  }
-  return document.write(`: ${day}<br>`);
+    let day;
+    switch (i) {
+        case 0:
+            day = "Понеділок";
+            break;
+        case 1:
+            day = "вівторок";
+            break;
+        case 2:
+            day = "середа";
+            break;
+        case 3:
+            day = "четверг";
+            break;
+        case 4:
+            day = "П'ятниця";
+            break;
+        case 5:
+            day = "Субота";
+            break;
+        case 6:
+            day = "Неділя";
+            break;
+    }
+    return document.write(`: ${day}<br>`);
 }
 for (let i = 0; i < week.length; i++) {
-  if (week[i] < 20) {
-    dayWeek(i);
-  }
+    if (week[i] < 20) {
+        dayWeek(i);
+    }
 }
 for (let i = 0; i < week.length; i++) {
-  if (week[i] < minDay) {
-    minDay = week[i];
-    dayWeek(i);
-  }
+    if (week[i] < minDay) {
+        minDay = week[i];
+        dayWeek(i);
+    }
 }
 for (let i = 0; i < week.length; i++) {
-  if (week[i] > maxDay) {
-    maxDay = week[i];
-    dayWeek(i);
-  }
+    if (week[i] > maxDay) {
+        maxDay = week[i];
+        dayWeek(i);
+    }
 }
 for (let i = 0; i < week.length; i++) {
-  if (i < 5) {
-    working += week[i];
-  } else {
-    dayOff += week[i];
-  }
+    if (i < 5) {
+        working += week[i];
+    }
+    else {
+        dayOff += week[i];
+    }
 }
 document.write(`загальну кількість клієнтів у робочі: ${working}<br>`);
 document.write(`загальну кількість клієнтів у вихідної: ${dayOff}`);
