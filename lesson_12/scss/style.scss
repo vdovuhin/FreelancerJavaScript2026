@@ -1,0 +1,111 @@
+@use "sass:math";
+/* Підключення фрифтів */
+
+/* Google Fonts (Plugin) */
+
+/* Локальне підключення шрифтів */
+//@import "_fonts.scss";
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+}
+.wrapper {
+	//min-height: 100%;
+	overflow: clip; /* clip */
+
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+	z-index: 2;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* --------------------- */
+
+[class*="__container"] {
+	max-width: 1024px;
+	padding-inline: 15px;
+	margin: 0 auto;
+}
+
+/* --------------------- */
+
+.wrapper {
+}
+.header {
+}
+.page {
+	// .page__container
+	&__container {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		row-gap: 40px;
+	}
+	// .page__main
+	&__main {
+		padding-block: 40px;
+		line-height: 1.5;
+	}
+
+	// .page__items
+	&__items {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		row-gap: 20px;
+	}
+	// .page__item
+	&__item {
+		&:not(:last-child) {
+			margin-block-end: 10px;
+		}
+	}
+	// .page__item-tite
+	&__item-tite {
+		font-size: 20px;
+		font-weight: 600;
+		color: rgb(70, 97, 151);
+		&:not(:last-child) {
+			margin-block-end: 5px;
+		}
+	}
+	// .page__item-link
+	&__item-link {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	// .page__item-text
+	&__item-text {
+	}
+}
+.footer {
+}
+.page {
+	// .page__container
+	&__container {
+	}
+	// .page__main
+	&__main {
+	}
+}
+.main {
+	// .main__titel
+	&__titel {
+		font-size: 40px;
+		font-weight: 600;
+		
+	}
+	
+	// .main__text
+	&__text {
+		font-size: 18px;
+	}
+}
