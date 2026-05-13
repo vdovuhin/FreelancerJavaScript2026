@@ -17,21 +17,21 @@ function getRandomArray(a) {
 let arrGenerator = getRandomArray(lengthMay);
 function myRecursiv(arr) {
     let result = [];
-    function backRecursiv(currentArr, remainingArr) {
-        if (remainingArr.length === 0) {
-            result.push(currentArr);
+    function backRecursiv(index, currentArr) {
+        if (index === arr.length) {
+            result.push([...currentArr]);
             return;
         }
-        for (let i = 0; i < remainingArr.length; i++) {
-            let chosenElement = remainingArr[i];
-            let nextRemaining = remainingArr.filter((_, index) => index !== i);
-            backRecursiv([...currentArr, chosenElement], nextRemaining);
-        }
+        currentArr.push(arr[index]);
+        backRecursiv(index + 1, currentArr);
+        currentArr.pop();
+        backRecursiv(index + 1, currentArr);
     }
-    backRecursiv([], arr);
-    return result;
+    backRecursiv(0, []);
+    return result.sort((a, b) => a.length - b.length);
 }
-document.write(`${myRecursiv(arrGenerator)}<br>`);
+document.write(`Початковий масив: ${arrGenerator.join(" ")}<br>`);
+document.write(`Згенеровані підмножини: ${myRecursiv(arrGenerator).map((sub) => `[${sub.join()}]<br>`)}`);
 //========================================================================================================================================================
 /*
     *	=== Завдання 2: ===
@@ -102,4 +102,4 @@ function getPlaiFullField(arrGem) {
     poleGems(0, 0);
     return fullField;
 }
-document.write(`${getPlaiFullField(pole)}<br>`);
+document.write(`${getPlaiFullField(pole).map((sub) => `[${sub.join()}]<br>`)}<br>`);
