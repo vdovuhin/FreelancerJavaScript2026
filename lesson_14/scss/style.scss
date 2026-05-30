@@ -1,0 +1,63 @@
+@use "sass:math";
+/* Підключення фрифтів */
+
+/* Google Fonts (Plugin) */
+
+/* Локальне підключення шрифтів */
+//@import "_fonts.scss";
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+}
+.wrapper {
+	//min-height: 100%;
+	overflow: clip; /* clip */
+
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+	z-index: 2;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* --------------------- */
+
+[class*="__container"] {
+	max-width: 1024px;
+	padding-inline: 15px;
+	margin: 0 auto;
+}
+
+/* --------------------- */
+
+.wrapper {
+}
+.header {
+}
+.page {
+	
+}
+.footer {
+}
+
+.main {
+	// .main__titel
+	&__titel {
+		font-size: 40px;
+		font-weight: 600;
+		
+	}
+	
+	// .main__text
+	&__text {
+		font-size: 18px;
+	}
+}
+
+
