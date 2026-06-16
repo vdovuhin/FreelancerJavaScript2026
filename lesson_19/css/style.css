@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+/* Локальне підключення шрифтів */
+/* Скидання стилів */
+@import url("reset.css");
+/* Основні стилі */
+.wrapper {
+  overflow: clip; /* clip */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+/* --------------------- */
+[class*=__container] {
+  max-width: 1024px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+
+/* --------------------- */
+.page {
+  margin-top: 20px;
+}
+
+.page__body {
+  width: 720px;
+  height: 560px;
+  padding: 20px;
+  border: 1px solid #354240;
+  position: relative;
+  overflow: hidden;
+}
+
+.tank {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
