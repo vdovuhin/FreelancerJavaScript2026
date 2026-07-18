@@ -1,0 +1,129 @@
+@use "sass:math";
+/* Підключення фрифтів */
+
+/* Google Fonts (Plugin) */
+
+/* Локальне підключення шрифтів */
+//@import "_fonts.scss";
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+}
+.wrapper {
+	//min-height: 100%;
+	overflow: clip; /* clip */
+
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+	z-index: 2;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* --------------------- */
+
+[class*="__container"] {
+	max-width: 1024px;
+	padding-inline: 15px;
+	margin: 0 auto;
+}
+
+/* --------------------- */
+
+.wrapper {
+}
+.header {
+}
+.page {
+	margin-top: 20px;
+}
+.footer {
+}
+
+.page {
+		// .page__container
+		&__container {
+			
+		}
+		// .page__body
+		&__body{			
+			width: 450px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;	
+			gap: 20px;
+			padding: 20px;
+			border: 1px solid #354240;
+
+		}
+		// .page__label
+		&__label {
+			font-size: 18px;
+			font-weight: bold;
+			display: flex;
+			align-items: center;			
+			gap: 5px;
+		}
+		// .page__span
+		&__span {
+			font-size: 14px;
+			color: #555;
+			margin-top: 5px;
+			flex-shrink: 0;
+		
+		}
+		// .page__input
+		&__input {
+			padding: 10px;
+			border: 1px solid #423535;
+			border-radius: 5px;
+			font-size: 16px;
+			
+		}
+		// .page__buttons
+		&__buttons {
+			display: flex;
+			gap: 10px;
+		
+		}
+		// .page__button
+		&__button {
+			padding: 10px 15px;
+			border: none;
+			border-radius: 5px;
+			background-color: #007bff;
+			color: white;
+			cursor: pointer;
+		
+			&:hover {
+				background-color: #0056b3;
+			}
+			
+		}
+}
+
+ol{
+	margin: 30px;
+}
+
+.form{
+	&__input{
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+	&__result{
+		margin-top: 20px;
+		font-size: 16px;
+		border: 1px solid #7e4141;
+		padding: 5px;
+	}
+}
